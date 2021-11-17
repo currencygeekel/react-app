@@ -1,11 +1,9 @@
 import React from "react";
-import { FontAwesome } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
 import {Text, StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
-const LoginPage = ({navigation})=>{
+const Login= ({navigation})=>{
 
     function navigate(){
-        navigation.navigate("SignUpPage");
+        navigation.navigate("SignUp");
     
         
     }
@@ -19,7 +17,7 @@ const LoginPage = ({navigation})=>{
                <View style={styles.FormView}>   
                   <TextInput placeholder={"Email Address"} placeholderTextColor={"black"} style={styles.TextInput}/>
                   <TextInput placeholder={" Password"} secureTextEntry={true} placeholderTextColor={"black"} style={styles.TextInput}/>
-                  <TouchableOpacity style={styles.Button} onPress= {() => {navigation.navigate("HomePage");}}> 
+                  <TouchableOpacity style={styles.Button} onPress= {() => {navigation.navigate("Home");}}> 
                       <Text style={styles.ButtonText}>Login</Text>
                   </TouchableOpacity> 
 
@@ -124,4 +122,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default LoginPage
+export default Login
