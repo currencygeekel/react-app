@@ -7,6 +7,7 @@ import Login from './screens/Login';
 import Home from './screens/Home';
 import Details from './screens/Details';
 import Cart from './screens/Cart';
+import SignUp from './screens/SignUp';
 
 const Main = createNativeStackNavigator();
 
@@ -26,6 +27,9 @@ export default function App() {
        <Main.Screen
        name='Cart'
        component={Cart} />
+       <Main.Screen
+       name='SignUp'
+       component={SignUp} />
      </Main.Navigator>
    </NavigationContainer>
   );
