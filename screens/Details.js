@@ -28,7 +28,7 @@ export default function ProductDetails({navigation, route}){
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
-                <Image source={{uri: products.image}} style={{
+                <Image source={products.image} style={{
                     height: 250,
                     width: 220,
                     resizeMode: 'contain',

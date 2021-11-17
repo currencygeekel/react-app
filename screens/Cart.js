@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 
 const Cart = () => {
 
     return(
-        <View>
-             <Text> This is the cart! </Text>
+        <SafeAreaView style={{flex : 1}}>
+            <View style={{flex : 1, backgroundColor : "yellow"}}>
+             <Text> This is yooo cart! </Text>
         </View>
+        </SafeAreaView>
     );
 }
 

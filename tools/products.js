@@ -1,6 +1,6 @@
 const products = [
     {
-        "image": require('../assets/tshirts/shirt1.jpg'),
+        "image": require("../assets/tshirts/shirt1.jpg"),
         "price": "90"
     },
     {
@@ -28,5 +28,4 @@ const products = [
         "price": "190"
     }
 ];
-
 export default products;

@@ -7,14 +7,14 @@ import {
   FlatList,
   Image,
   Dimensions,
-  TextInput, TouchableHighlight, TouchableOpacity
+  TextInput, TouchableHighlight, TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import products from '../tools/products';
 
 const Home = ({navigation}) => {
 
-  const Card = ({products}) => {
+  const Card = ({product : products}) => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
@@ -35,7 +35,8 @@ const Home = ({navigation}) => {
 
           <View>
             <Image
-              source={{uri: products.image}}
+              source={products.image}
+              resizeMode="cover"
               style={{height: 100, width: 120, borderRadius: 12}}
             />
           </View>
@@ -43,8 +44,9 @@ const Home = ({navigation}) => {
           <View>
           <Text style={{fontWeight: 'bold', fontSize: 10, marginTop: 10}}>
             {products.title}
-            </Text>
+          </Text>
           </View>
+          
           <View
             style={{
               flexDirection: 'row',
@@ -86,7 +88,7 @@ const Home = ({navigation}) => {
         numColumns={2}
         data={products}
         renderItem={({item}) => {
-          return <Card products={item}/>;
+          return <Card product={item}/>;
         }}
       />
       </View>
@@ -124,6 +126,7 @@ const style = StyleSheet.create({
   },
   searchContainer: {
     height: 50,
+    width: 200,
     backgroundColor: '#dbdad5',
     borderRadius: 10,
     flexDirection: 'row',

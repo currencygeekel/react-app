@@ -1,14 +1,23 @@
 import React from "react";
-import {Text, StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
+import {Text, StyleSheet, View, TextInput, TouchableOpacity, ImageBackground } from "react-native";
+const myImage = { uri: "https://reactjs.org/logo-og.png" };
 const Login= ({navigation})=>{
 
     function navigate(){
         navigation.navigate("SignUp");
-    
+  
         
     }
+    
+
+    
     return(
-        <View>
+      <View style={{flex : 1}}>
+        <ImageBackground source={require("../assets/tshirts/shirt1.jpg")} style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center"
+  }}>
            <View style={styles.BottomView}>
                <Text style={styles.Heading}>
                    Welcome To{"\n"}
@@ -31,8 +40,8 @@ const Login= ({navigation})=>{
                </Text>
                </TouchableOpacity>
            </View>
+        </ImageBackground>
         </View>
-
 
 
 
@@ -43,7 +52,6 @@ const styles = StyleSheet.create({
     BottomView:{
         width:"100%",
         height:"100%",
-        backgroundColor: "white",
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
     },
@@ -91,7 +99,7 @@ const styles = StyleSheet.create({
     },
 
     QuestionText:{
-            color: "black",
+            color: "white",
             textAlign: "center", 
             fontWeight: "bold",
             fontSize: 18,
@@ -99,7 +107,7 @@ const styles = StyleSheet.create({
     },
 
     SignUpText:{
-        color: "black",
+        color: "white",
         fontWeight: "bold"
     },
     TextButton:{
